@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>News Hub</h1>
+       
+    </header>
+
+    <div class="controls">
+        <select id="category" onchange="fetchNews()">
+            <option value="general">General</option>
+            <option value="technology">Technology</option>
+            <option value="sports">Sports</option>
+            <option value="business">Business</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search news..." oninput="fetchNews()">
+        <a href="saved.html" class="saved-btn">Saved Articles</a>
+    </div>
+
+    <div id="loader">Loading...</div>
+    <div id="news-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
